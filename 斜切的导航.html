@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        ul{width: 435px; margin: 30px auto;overflow: hidden;}
+        ul li{float: left;width: 100px;height: 30px;background: red;color: #ffffff;line-height: 30px;text-align: center;margin: 0 5px;transform: skew(-30deg);cursor: pointer;}
+        ul li.active{background: chartreuse;}
+        ul li span{display: block;transform: skew(30deg)}
+        ul li:first-child{padding-left: 10px;margin-left: -10px;}
+        ul li:last-child{padding-right: 20px;margin-right: -20px;}
+
+        .box1{width: 500px;height: 500px;border:1px black solid;margin: 0 auto;}
+        .box2{width: 100px;height: 100px;transition: 1s;transform-origin: 100px 100px;}
+        .box2:hover{transform:translate(250px,60px) scale(.5)rotate(90deg)}
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="active"><span>首页</span></li>
+            <li><span>服务范围</span></li>
+            <li><span>关于我们</span></li>
+            <li><span>联系信息</span></li>
+        </ul>
+    </div>
+    <div class="box1">
+        <div class="box2">
+            <img src="./image/02.JPG" alt="">
+        </div>
+    </div>
+</body>
+</html>

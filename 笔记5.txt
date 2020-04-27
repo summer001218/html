@@ -1,0 +1,253 @@
+1.animation 动画 ？
+   animation-name : 设置动画的名字（自定义）
+   animation-duration : 动画的持续时间
+   animation-delay : 动画的延迟时间
+   animation-iteration-count : 动画的重复次数，默认值就是1，Infinite无限次数
+   animation-timing-function : 动画的运动形式
+
+   @keyframes 关键帧
+    @keyframes 名字{ 
+        0%{}
+        25%[]
+        50%{}
+        75%{}
+        100%{}
+        }
+
+   注：
+        1.运动结束后，默认情况下会停留在起始位置。
+        2. @keyframes : from -> 0%  ,  to -> 100%
+
+    animation-fill-mode : 规定动画播放之前或之后，其动画效果是否可见。
+         none(默认值) ：在运动结束之后回到初始位置，在设定了延迟的情况下，让0%在延迟后生效。
+         backwards :  在延迟的情况下，让0%在延迟前生效
+         forkwards :  在运动结束的之后，停到结束的位置
+         both : backwards和forwards同时生效
+    
+    animation-direction : 属性定义是否应该轮流反向播放动画。
+        alternate : 一次正向（0%-100%），一次反向（100%-0%）
+        reverse : 永远都是反向，从0%-100%
+        normal(默认值) ：永远都是正向 ，从0%-100%
+
+2.animate.css ?
+
+    一款强大的预设css3动画库。
+       官网地址：https://daneden.github.io/animate.css/
+
+    基本使用：
+        animated : 基类（基础的样式，每个动画效果都需要加）
+        infinite : 动画的无限次数
+
+3.3D操作？
+  transform:
+        rotatex() : 正值向上翻转
+        rotatey() ：正值向上翻转
+        translatez() ：正值向前，负值向后
+        scalez() : 立体元素的厚度
+
+    3D写法
+        scale3d() : 三个值 x y z
+        translate3d() : 三个值 x y z
+        rotate3d() : 四个值0|1（x轴是否添加旋转角度） 0|1（y轴是否添加旋转角度） 0|1（z轴是否添加旋转角度） deg
+
+    perspective(景深) ：离屏幕多远的距离去观察元素，值越大幅度越小。
+
+    perspective-origin : 景深-基点位置，观察元素的角度。
+
+    transform-origin:center center -50px; (Z轴只能写数值。不能写单词)
+
+    transform-style : 3D空间
+        flat (默认值2D) preserve-3d  (3d,产生一个三维空间)
+
+    backface-visibility : 背面隐藏
+            hidden,visble(默认值)
+
+4.CSS3背景扩展样式？
+    background-size : 背景图的尺寸大小
+        cover : 覆盖
+        contain : 包含
+    background-origin : 背景图的填充位置
+        padding-box : （默认）
+        border-box ：
+        content -box :
+    background-clip : 背景图的裁切方式
+        padding-box
+        border-box（默认）
+        content-box
+
+5.CSS3渐变 ？
+    1.线性渐变 -> linear-gradient是值，需要添加到background-image属性上
+    注：渐变的0度实在页面的下边，正值会按照顺时针旋转，负值按逆时针旋转。
+
+    2.径向渐变 -> radial-gradient
+
+6.字体图标 ？
+    font-face是CSS3中的一个模块，他主要是把自己定义的WEB字体嵌入到你的网页中。
+
+        好处：
+            1.可以非常方便的改变大小和颜色
+            2.放大后不会失真
+            3.减少请求次数和提高记载速度
+            4.简化网页布局
+            5.减少设计和前端工程师的工作量
+            6.可使用计算机没有提供的字体
+        使用：
+            @font-face{}
+
+7.text-shadow文字阴影 ？
+    文字阴影： x  y  blur color
+    注：阴影的默认颜色是跟文字颜色相同
+    注：通过都好的方式进行分割，可以设置多阴影
+
+8.box-shadow盒子阴影 ？
+    x ：偏移量
+    y ：偏移量
+    blur ：模糊
+    spread：范围
+    color ：颜色
+    inset ：内阴影
+    多阴影
+
+    注：盒子阴影的默认颜色是黑色。
+
+9.mask 遮罩 ？
+
+    url :
+    repeat : no-repeat
+    x : 可以数值 也可以center
+    y : 可以数值 也可以center
+    w : 高
+    h ：宽
+    多遮罩
+    注： mask目前还没有标准化，所以需要添加浏览器前缀。
+    注： 默认是x,y都平铺。
+
+10. box-reflect 倒影
+    above 上    
+    below 下
+    left  左
+    right 右
+    距离
+    遮罩|渐变
+    渐变：只是针对透明度的渐变，不能支持颜色的渐变。
+    注：scale负值也能倒影 transform:scale(-1)
+
+11.blur模糊
+    filter:blur(10px)
+12.calc:四则计算 width:calc(100%-100px)
+
+13.分栏布局
+    coulumn-count : 分栏的个数
+    coulumn-width : 分栏的宽度
+    coulumn-gap :   分栏的间距
+    coulumn-rule :  分栏的边线
+    coulumn-span :  合并分栏
+    注：coulumn-count和coulumn-width不要一起去设置。
+
+14.伪元素：
+    伪元素本质上是创建栏一个有内容的虚拟容器。这个容器不包含任何DOW元素，但是可以包含内容。另外，开发者还可以为伪元素自制样式。
+    :: selection
+    :: first-line / first-letter
+    :: before / after
+    ...
+
+15.CSS Hack分类
+    1.CSS属性前缀法
+        .elem{ _background:red;} -> IE6  *background和+background -> IE7  background:red\9 -> IE6-9   background\0 -> IE8-11
+    2.选择器前缀法
+        *html .elem{} -> IE6  *+html -> IE7  :root.elem{} ->IE9以上等高级浏览器
+    3.IE条件注释法
+
+16.布局扩展
+    1.等高布局
+        利用margin-bottom负值与padding-bottom配合实现
+    2.三列布局，左右固定，中间自适应
+        1.BFC方式
+        2.定位
+        3.浮动（双飞翼布局，圣杯布局）
+            margin负值
+        4.flex弹性盒模型
+            display:flex;
+17.flex 弹性盒模型弹性变形
+
+    display:flex; 添加在父容器上 使之成为弹性盒模型 可使子项自适应居中margin:auto;
+
+    作用在flex父容器上 
+    1.flex-direction : 用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上。
+        取值                        含义
+        row                 默认值，显示为行。方向为当前文档水平流方向，默认情况下是从左往右。
+    row-reverse             显示为行。但方向和row属性值是反的
+        column              显示为列
+    column-reverse          显示为列。但方向和column属性值是反的
+
+    2.flex-wrap : 用来控制子项整体单行显示还是换行显示。
+        取值                        含义
+        nowrap              默认值，表示单行显示，不换行
+        wrap                宽度不足换行显示
+        wrap-reverse        宽度不足换行显示，但是是从下往上开始，也就是原来换行在下面的子项现在跑到上面。
+
+    3. flex-flow : 是flex-direction和flex-wrap的缩写，表示flex布局的flow流动特性。第一个值表示方向，第二个值表示换行，中间用空格隔开。
+
+    4.justify-content ： 属性决定栏主轴方向上子项的对齐和分布方式。也就是水平方向上控制
+        取值                        含义
+        flex-start          默认值，表现为起始位置对齐。
+        flex-end            表现为结束位置对齐。
+        center              表现为居中对齐。
+        space-between       表现为两端对齐。between是中间的意思，意思是多余的空白间距只在元素中间区域分配。
+        space-around        around是环绕的意思，意思是每个flex子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半。
+        space-evenly        evenly是匀称 平等的意思。也就是视觉上，每个flex子项两侧空白间距完全相等。
+
+    5. align-items : items指的就是flex子项们，因此align-items指的就是flex子项们相对于flex容器在侧轴方向上的对齐方式。控制单个子项
+        取值                        含义
+        stretch             默认值，flex子项拉伸。
+        flex-start          表现为容器顶部对齐
+        flex-end            表现为容器底部对齐
+        center              表现为垂直居中对齐
+
+    6. align-content ： 可以看成和justify-content是相似且对立的属性，如果所有flex子项只有一行，则align-content属性是没有任何效果的。控制多行子项的对齐方式
+        取值                        含义
+        stretch             默认值。每一行flex子元素都等比例拉伸。例如，如果共两行flex子元素，则每一行拉伸高度是50%。
+        flex-start          表现为起始位置对齐。
+        flex-end            表现为结束位置对齐。
+        center              表现为居中对齐
+        space-between       表现为两端对齐
+        space-around        每一行元素上下都享有独立不重叠的空白空间。
+        space-evenly        每一行元素都完全上下等分。
+
+    作用在flex子项上
+        1.  order ：可以通过设置order改变某一个flex子项的排序位置。所有flex子项的默认order属性值是0.
+        2.flex-grow ： 属性中的grow是扩展的意思，扩展的就是flex子项所占据的宽度，扩展所占的空间就是出去元素外的剩余的空白间隙。默认值是0.
+        3.flex-shrink ： 属性中的shrink是“收缩”的意思，flex-shrink主要是处理当flex容器空间不足时候，单个元素的收缩比例。默认值是1.
+        4.flex-basis ： flex-basis定义了在分配剩余空间之前元素的默认大小。是个像素值
+        5.  flex  : 是flex-grow flex-shrink flex-basis的复合写法 默认值是 flex:0 1 auto;
+        6.align-self ： align-self指控制单独某一个flex子项的垂直对齐方式。
+
+18.grid网格布局？
+        Grid布局是一个二维的布局方法，纵横两个方向总是同时存在。
+        
+        作用在grid容器上                    
+        grid-template-columns    grid-template-columns和grid-template-rows 是网格进行横纵划分，形成二维布局。单位可以是像素，百分比，自适应以及fr单位（网格剩余空间比例单位）          
+        grid-template-rows           有时候，我们网格的划分是很规律的，如果需要天机多个横纵网格时，可以利用repeat()语法进行简化操作。       
+        grid-template-areas      area是区域的意思，grid-template-areas就是给我们的网格划分区域的。此时grid子项只要使用grid-area属性指定其隶属于哪个区。           
+        grid-template            grid-template是grid-template-rows ，grid-template-columns和grid-template-areas属性的缩写。           
+        grid-column-gap             grid-column-gap和grid-row-gap属性用来定义网格中网格间隙的尺寸。
+        grid-row-gap                CSS grid-gap属性是grid-column-gap和grid-row-gap属性的缩写。
+        grid-gap                 是grid-row-gap和grid-column-gap的复合写法：grid-gap: 横，纵；
+        justify-items            指定了网格元素的水平呈现方式，是水平拉伸显示，还是左中右对齐。 取值 ：stretch  默认值，拉伸。表现为水平或垂直填充。 center  表现为水平或垂直居中对齐。
+        align-items              指定了网格元素的垂直呈现方式，是垂直拉伸显示，还是上中下对齐。        start   表现为容器左侧或顶部对齐。
+        place-items              可以让align-items和justify-items属性写在单个声明中。                end    表现为容器右侧或底部对齐。
+        justify-content          指定了网格元素的水平分布方式。                              取值 ：stretch  默认值，拉伸。表现为水平或垂直填充。
+        align-content            指定了网格元素的垂直分布方式。                                     start   表现为容器左侧或顶部对齐。  space-between:表现为两端对齐。
+        place-content            可以让align-content和justify-content属性写在一个CSS声明中。         end    表现为容器右侧或底部对齐。  space-around:享有独立不重叠的空白空间。
+                                                                                                  center  表现为水平或垂直居中对齐。  space-evenly:平均分配空白空间。
+        作用在grid子项上
+        grad-column-start       水平方向上占据的起始位置。
+        grid-column-end         水平方向上占据的结束位置。（span属性）span表示个数，占据空间的个数。
+        grid-row-start          垂直方向上占据的起始位置。
+        grid-row-end            垂直方向上占据的结束位置。（span属性）span表示个数，占据空间的个数。
+        grid-column             grid-column-start + grid-column-end的缩写。
+        gird-row                grid-row-start + grid-row-end的缩写。
+        grid-area               表示当前网格所占用的区域，名字和位置两种表示方法。
+        justify-self            单个网格元素的水平对齐方式。
+        align-self              单个网格元素的垂直对齐方式。
+        place-self              justify-self和aling-self的缩写。

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        img{display: block;}
+
+        .rotate{width: 600px;height: 300px;border: 1px black solid;margin: 30px auto;perspective: 700px;
+            display: none;}
+        .rotate ul{width: 128px;height: 128px;margin: 50px auto;position:relative;transform-style: preserve-3d;transition: 2s;}
+        .rotate ul li{width: 128px;height: 128px;position: absolute;left: 0; top: 0;}
+
+        .rotate ul li:nth-child(1){transform: rotateY(0) translateZ(200px);}
+        .rotate ul li:nth-child(2){transform: rotateY(60deg) translateZ(200px);}
+        .rotate ul li:nth-child(3){transform: rotateY(120deg) translateZ(200px);}
+        .rotate ul li:nth-child(4){transform: rotateY(180deg) translateZ(200px);}
+        .rotate ul li:nth-child(5){transform: rotateY(240deg) translateZ(200px);}
+        .rotate ul li:nth-child(6){transform: rotateY(300deg) translateZ(200px);}
+
+        .rotate:hover ul{ transform: rotateY(360deg)}
+        #cli{width: 500px;height: 200px;margin-top: 200px;margin-left: 600px;font-size: 36px;color: crimson;}
+    </style>
+</head>
+<body>
+    <div id="cli">
+        <button>想看请点击我</button>
+    </div>
+    <div class="rotate" id="ima">
+        <ul>
+            <li><img src="./image/14meiweishiwu_01.png" alt=""></li>
+            <li><img src="./image/14meiweishiwu_02.png" alt=""></li>
+            <li><img src="./image/14meiweishiwu_03.png" alt=""></li>
+            <li><img src="./image/14meiweishiwu_04.png" alt=""></li>
+            <li><img src="./image/14meiweishiwu_05.png" alt=""></li>
+            <li><img src="./image/14meiweishiwu_06.png" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        function xh(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","http://localhost:3000/in")
+            xhr.addEventListener("load",loadHandler)
+            xhr.send()
+        }
+        function loadHandler(e){
+            console.log(this.response)
+        }
+        init()
+        function init(){
+            var cli = document.getElementById("cli")
+            var ima = document.getElementById("ima")
+            cli.addEventListener("click",clickHandler)
+        }
+        function clickHandler(e){
+            ima.style.display = "block"
+            cli.style.display = "none"
+            xh()
+        }
+    </script>
+</body>
+</html>

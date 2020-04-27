@@ -1,0 +1,218 @@
+
+1.什么是HtML，CSS？
+  是做网站的编程语言。
+  浏览器把代码解析后的样子就是我们看到的网站，如何看到网站的原始代码呢？通过鼠标右键选择查看网页源代码。
+
+  如何去写代码？写到哪里呢？
+
+       一个网站是由多个网页组成的。 每一个网页都是 .HTML文件
+
+       index.HTML 首页名称必须index
+
+2.VS Cold编辑器？
+  
+  如何安装插件？ 语言包，open in browser    view in browser
+
+  学习编辑器使用
+   
+  shift + end     从头选中一行
+  shift + home    从尾选中一行
+  shift + alt + ↓  快速复制一行
+  alt   + ↓或↑     快速移动一行
+
+  tab              向后缩进
+  tab + shift      向前缩进
+
+  多光标 alt + 鼠标左键
+  ctrl + d   选择相同元素的下一个
+
+3. chrome浏览器
+    五大浏览器是什么 ？
+  
+4. 深入了解网站开发？
+
+    UI设计师 ： 设计稿
+
+    wed前端开发工程师
+       设计稿 -> 代码
+       数据库里的数据 -> 显示到页面
+       html + css 
+        html : 结构
+        css  ：样式
+        javaScript :行为
+    wed后端开发工程师
+
+5. wed三大核心技术？
+    HTML
+    css
+    javaScript
+
+6.HTML基本结构和属性？
+
+   HTML ：超文本 标记 语言
+
+   超文本 ：文本内容 + 非文本内容（图片，视频，音频等）
+
+   标记 ：<单词>
+
+   语言 ：编程语言
+
+   标记也叫做标签：
+      <header>
+      <footer>
+      写法分成两种：
+          单标签  <header>
+          双标签  <header></header>
+      创建标签快捷键：单词 + tab键 -><单词>
+   标签的属性： 来修饰标签的，设置当前标签的一些功能。
+      《标签  属性= "值"   属性2=“值2”》
+
+7. HTML初始代码？
+    
+    每个.html文件都有的代码叫做初始代码，要符合html文件的规范写法。
+
+    ！+ tab键 ：快速的创建html的初始代码
+
+    <!DOCTYPE html>     文档声明 ： 告诉浏览器这是一个html文件
+    <html lang="en">    html文件的最外层标签：包裹着所有html标签代码  lang="en" 表示是一个英文网站  lang= "zh-cn"表示一个中文网站
+    <head>
+        <meta charset="UTF-8">     元信息：是编写网页中的一些辅助信息 charset="UTF-8"国际编码，让网页不出现乱码的情况
+        <meta name="viewport" content="width=`, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>    设置网页的标题
+    </head>
+    <body>
+        显示网页内容的区域
+    </body>
+    </html>
+
+8.HTML注释？
+   
+   写法<！--注释的内容--> 在浏览器中看不到，只能在代码中看到注释内容
+
+   意义：
+       1.把暂时不用的代码注释起来，方便以后使用。
+       2.对开发人员进行提示。
+   快捷添加注释与删除注释：
+       1.ctrl+/ 
+       2.shift + alt + a
+
+9.标题与段落？
+    
+     标题 -> 双标签 ： <h1></h1>....<h6></h6>
+
+     在一个网页中，h1标题最重要，并且一个.html文件中只能出现一次h1标签。
+
+     h5 h6标签在网页中不经常使用。
+
+     段落 -> 双标签 ：<p></p>
+
+10. 文本修饰标签？
+
+    强调 -> 双标签：<strong></strong>,<em></em>
+    
+
+       区别：
+           1.写法和展示效果是有区别的，一个加粗，一个斜体。
+           2.strong的强调性更强，em的强调性稍弱。
+
+    下标：<sub></sub>
+    上标：<sup></sup>
+
+    删除文本：<del></del>
+    插入文本：<ins></ins>
+        注：一般情况下，删除文本都是和插入文本配合使用的。
+
+11.图片标签？
+    
+    img -> 单标签
+       src : 引入图片的地址。
+       alt : 图片出现问题的时候，可以显示一段友好的提示文字。
+       title : 提示信息
+       width,height : 调整图片大小。
+
+12.路径的引入？
+
+        相对路径
+        绝对路径
+
+13.链接标签？
+
+    a -> 双标签 <a></a>
+
+        href属性：链接的地址
+        target属性： 可以改变链接打开的方式，默认情况下：在当前页面打开_self 新窗口打开 _blank
+    base -> 单标签 ：作用就是改变链接的默认行为的。
+
+14.链锚？
+ 
+        两种做法
+        1.#号 + id属性
+        2.#号 + name属性（注意name属性嫁给的是a标签）
+
+15.特殊字符？
+       1.& + 字符
+       2.解决冲突 左右尖括号，添加多个空格的实现
+       3.&lt,&gt,&nbsp;
+
+16.列表标签？
+
+      1.无序列表 -> ul li 符合嵌套的规范
+      2.有序列表 -> ol li 一般用的比较少，可以用无序列表来实现。
+      3.定义列表 -> dl dt dd 列表项需要
+      
+      注：列表之间可以互相嵌套，形成多层级的列表。
+
+17. 表格标签？
+   table：表格的最外层容器,tr定义表格行,th定义表头,td定义表格单元,caption定义表格标题 
+      注：之间是有嵌套关系的，要符合嵌套规范。
+   语义化标签：thead,tbody,tfoot
+   注：在一个table中tbody是可以出现多次的，但是thead,tfood只能出现一次。
+   
+   表格属性：
+   border:表格边框
+   cellpadding:单元格内的空间
+   cellspacing:单元格之间的空间
+   rowspan:合并行
+   colspan:合并列
+   align:左右对齐方式
+   valign:上下对齐方式
+
+   align : left,center,right
+   valign : top,middle,bottom
+
+18.表单标签？
+   
+   form , input， textarea，select, . .
+      input（单标签）标签有一个type属性，决定是什么控件。
+      text：普通的文本输入框 ; 
+      password：密码输入框  
+      checkbox:复选框  
+      radio:单选框
+      file：上传文件 
+      submit:提交按钮 
+      reset：重置按钮
+      checked:固定选 
+      placeholder:请输入什么什么  
+      disabled:指定不能选着项 
+      label:点击范围变大
+      <textarea>:多行文本框，
+      <select><option>:下拉菜单 
+      selected:显示在默认里 
+      size：显示及项 
+      multiple:多选
+    name主要用于表单，对应的值，一般单选和多选必须设置value值
+    <input type="radio" name="abc" value="a">
+    <input type="radio" name="abc" value="b">
+    <input type="radio" name="abc" value+"c">
+    <input type="radio" name="abc" value="d">
+    <input type="text" name="user">
+    <input type="password" name="pass">
+    <input type="submit">
+
+19.div和span ?
+    div(块):div全称为division,“分割，分区”的意思，<div>标签用来划分一个区域，相当于一块区域容器，可以容纳段落，标题，表格，图像等各种网页元素。即html中大多数标签都可以嵌套在<div>标签中，<div>中还可以嵌套多层<div>,用来将网页分割成独立的，不同的部分，来实现网页的规划和布局。
+    span（内联）：
+      用来修饰文字的，div与span都是没有任何默认样式的，需要配合CSS才行。
+
+

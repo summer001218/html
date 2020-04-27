@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        img{display: block;}
+
+        .box{width: 480px;height: 640px;margin: 100px auto; position: relative;}
+        .box:hover:before{transition:left 2s;left: 800px;}
+        .box:before{content: ""; position: absolute;width: 10px;height: 640px;left: -190px;top: 0;overflow:hidden;
+        background-image: linear-gradient(to right bottom,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 50%,rgba(255,255,255,.5) 100%);transform: skewX(-25deg)}
+      
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./image/IMG_0294.JPG" alt="">
+    </div>
+</body>
+</html>

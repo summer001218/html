@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>╭(╯^╰)╮</title>
+    <style>
+        .container{
+            width: 480px;
+            height: 640px;
+            position: relative;
+        }
+        .container:hover:before{
+            transition: left 2s;/*过渡,改变闪光的位置*/
+            left: 770px;
+        }
+        .container:before{/*在图片之前插入闪光*/
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 640px;
+            top: 0;
+            left: -190px;
+            overflow: hidden;
+            background-image: linear-gradient(to right,rgba(255,255,255,.2) 0,rgba(255,255,255,.5) 50%,rgba(255,255,255,.2) 100%);/*linear-gradient渐变效果*/
+            transform: skewX(-25deg);/*沿x轴倾斜*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./image/IMG_0294.JPG" alt="加载中..."/>
+    </div>
+</body>
+</html>
+————————————————
+版权声明：本文为CSDN博主「wjy199506」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/wjy199506/article/details/53640662

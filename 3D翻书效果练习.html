@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+
+        .book{width: 500px;height: 500px;border: 1px white solid; margin: 30px auto;position: relative;perspective: 600px; perspective-origin:top left;}
+        .book div{width: 200px;height: 200px;border: 1px black solid;font-size: 24px;line-height: 100px;text-align: center;position: absolute;}
+
+    
+        .book div:nth-child(1){transform-origin:left;transform: translateX(-200px) }
+        .book div:nth-child(2){background: blue;color: white;z-index: 10;transform-origin: left;transform: rotateY(0)}
+        .book div:nth-child(3){background: white; z-index: 8;transform-origin: left;transform: rotateY(0)}
+        .book div:nth-child(4){background: white;z-index: 6;transform-origin: left;transform: rotateY(0)}
+        .book div:nth-child(5){background: white;z-index: 4;transform-origin: left;transform: rotateY(0)}
+        .book div:nth-child(6){background: white;}
+       
+    
+    </style>
+</head>
+<body>
+    <div class="book">
+        <div></div>
+        <div>首页</div>
+        <div>第一页</div>
+        <div>第二页</div>
+        <div>第三页</div>
+        <div></div>
+    </div>
+</body>
+</html>

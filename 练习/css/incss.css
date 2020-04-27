@@ -1,0 +1,33 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color: #313131;}
+img{display:block;}
+h1,h2,h3{font-size: 18px;font-weight: normal;}
+body{font-family: arial;}
+
+.l{float: left;}
+.r{float: right;}
+.clear:after{content: "";display: block;clear: both;}
+.container{width: 1080px;margin: 0 auto;position:relative;}
+.container-fluid{width: 100%;}
+
+.area{background: url(../image/titbg.jpg) no-repeat center -4px;text-align: center;margin-top: 50px;}
+.area h2{ margin-bottom: 14px;color: #6d6d6d;}
+.area p{font-size: 9px;color: #9d9d9d;}
+
+#foot{height: 60px; background: #66c5b4 no-repeat}
+#foot p{font-size: 14px;line-height: 60px;color: white;}
+#foot ul li a{font-size: 12px;line-height: 60px;color:white;margin-left: 32px;}
+#foot li a:hover{text-decoration: underline;}
+
+#head{height: 81px; position:sticky; top:0;z-index: 30;}
+#head .head_logo{width: 162;height: 44px;;}
+#head .head_menu{margin-top:33px;}
+#head .head_menu li{float: left;margin-left: 36px;}
+#head .head_fre a{color: #66c5b4;}
+
+
+#address{min-height: 80px;margin-top: 32px;}
+#address li{font-size: 12px;color: #888888;line-height: 33px;}
+#address li a{font-size: 12px;color: #888888;}
+#address li a:hover{text-decoration: underline;cursor: pointer;}

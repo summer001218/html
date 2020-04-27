@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #rep{width: 100px;height: 100px; position: relative;margin: 200px auto;transform-style: preserve-3d;
+             transition: 2s;transform-origin: center center -50px;
+        }
+        #rep:hover{transform: rotateY(360deg)}
+
+        .box{width: 100px;height: 100px;border: 1px black solid; border-radius: 5px;
+            display: grid;background: white;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr);
+            place-items: center center;
+            position: absolute;
+            left: 0;top: 0;
+        }
+        .box div{width: 30px;height: 30px;background: red;border-radius: 50%;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .box2{width: 100px;height: 100px;border: 1px black solid; border-radius: 5px;
+            display: grid;background: white;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr);
+            place-items: center center;
+             position: absolute; 
+            left: 100px;top:0;transform-origin: left;transform: rotateY(90deg);     
+        }
+        .box2 div{width: 30px;height: 30px;background: red;border-radius: 50%;}
+        .box2 div:nth-child(2){grid-column: 3 / 4; grid-row: 3 / 4}
+        
+        .box3{width: 100px;height: 100px;border: 1px black solid; border-radius: 5px;
+            display: grid;background: white;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr);
+            place-items: center center;
+            position: absolute; 
+            left: -100px;top: 0;transform-origin: right;transform:rotateY(-90deg) 
+        }
+        .box3 div{width: 30px;height: 30px;background: red;border-radius: 50%;}
+        .box3 div:nth-child(2){grid-column: 3 / 4; grid-row: 3 / 4}
+        .box3 div:nth-child(3){grid-column: 2 / 3;grid-row: 2 / 3}
+
+        .box4{width: 100px;height: 100px;border: 1px black solid; border-radius: 5px;
+            display: grid;background: white;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr); 
+            place-items: center center;  
+            position: absolute;
+            left: 0;top: 100px;transform-origin: top;transform: rotateX(-90deg)    
+        }
+        .box4 div{width: 30px;height: 30px;background: red;border-radius: 50%;}
+        .box4 div:nth-child(2){grid-column: 1 / 2; grid-row: 3 / 4}
+        .box4 div:nth-child(3){grid-column: 3 / 4;grid-row: 1 / 2}
+        .box4 div:nth-child(4){grid-column: 3 / 4;grid-row: 3 / 4}
+
+        .box5{width: 100px;height: 100px;border: 1px black solid; border-radius: 5px;
+            display: grid;background: white;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr);
+            place-items: center center;    
+            position: absolute;
+            left: 0;top: -100px;transform-origin: bottom;transform: rotateX(90deg)   
+        }
+        .box5 div{width: 30px;height: 30px;background: red;border-radius: 50%;}
+        .box5 div:nth-child(2){grid-column: 1 / 2; grid-row: 3 / 4}
+        .box5 div:nth-child(3){grid-column: 3 / 4;grid-row: 1 / 2}
+        .box5 div:nth-child(4){grid-column: 3 / 4;grid-row: 3 / 4}
+        .box5 div:nth-child(5){grid-column: 2 / 3;grid-row: 2 / 3}
+
+        .box6{width: 100px;height: 100px;border: 1px black solid; border-radius: 5px;
+            display: grid;background: white;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr); 
+            place-items: center center; 
+            position: absolute; 
+            left: 0;top: 0;transform: translatez(-100px)    
+        }
+        .box6 div{width: 30px;height: 30px;background: red;border-radius: 50%;}
+        .box6 div:nth-child(2){grid-column: 1 / 2; grid-row: 3 / 4}
+        .box6 div:nth-child(3){grid-column: 3 / 4;grid-row: 1 / 2}
+        .box6 div:nth-child(4){grid-column: 3 / 4;grid-row: 3 / 4}
+        .box6 div:nth-child(5){grid-column: 1 / 2;grid-row: 2 / 3}
+        .box6 div:nth-child(6){grid-column: 3 / 4;grid-row: 2 / 3}
+    </style>
+</head>
+<body>
+    <div id="rep">
+        <div class="box">
+            <div></div>
+        </div>
+        <div class="box2">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box5">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box6">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

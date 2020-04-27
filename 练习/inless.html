@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/incss.css">
+    <style>
+        #banner{position: relative;}
+        #banner .banner_pg{width: 100%;height: 500px;position: relative;}
+        #banner .banner_pg li{width: 100%;height: 100%; background: no-repeat center 0;
+        position: absolute;left: 0;top: 0;opacity: 0; z-index: 1;}
+        #banner .banner_pg li.active{opacity: 1;z-index: 10;}
+        #banner .banner_pg li:hover{cursor:pointer;}
+        #banner .banner_bth{width: 100%;position: absolute;z-index: 20;font-size: 0; bottom: 19px;text-align: center;}
+        #banner .banner_bth li{display: inline-block; width: 12px;height: 12px; border: 2px solid #e8eeef;
+          box-sizing: border-box;  border-radius: 50%;cursor:pointer;margin: 0 6px;}
+        #banner .banner_bth li.active{background: white;}
+      
+        #server{min-height: 482px;overflow: hidden;}
+        #server .server_bth{width:1080px;margin-top:40px;text-align:center;}
+        #server .server_bth li div{width: 102px;height: 102px;margin: 0 84px 35px 84px;}
+        #server .server_bth li:nth-of-type(1) div{background-image: url(./image/web1.png)}
+        #server .server_bth li:nth-of-type(2) div{background-image: url(./image/graphic1.png)}
+        #server .server_bth li:nth-of-type(3) div{background-image: url(./image/e-bussiness1.png)}
+        #server .server_bth li:nth-of-type(4) div{background-image: url(./image/mail1.png)}
+        #server .server_bth li h3{font-size: 16px;font-weight: bold; margin-bottom: 21px;color: #747474;}
+        #server .server_bth li p{font-size: 14px;line-height: 22px;color: #999999;}
+
+        #ku{width: 100%;min-height: 508px;overflow: hidden; background: #f8f8f8 no-repeat;}
+        #ku .ku_title{width: 1080px;height: 100%;text-align: center;margin-top: 47px;}
+        #ku .ku_title h2{font-size: 20px;color: #66c5b4;margin-bottom: 14px;}
+        #ku .ku_title p{font-size: 10px;color: #9d9d9d;}
+        #ku .ku_img li{float: left;margin: 47px 7px;}
+        #ku .ku_more{width: 182px;height: 38px;border: 1px solid white; 
+            background: #66c5b4;border-radius: 25px;margin: 0 auto;}
+        #ku .ku_more a{font-size: 14px;line-height: 38px; color: white;margin: 0 45px 0 45px;}
+        #ku .ku_more a:hover{text-decoration: underline;}
+
+        #news{min-height: 484px;overflow: hidden;}
+        #news dl{margin-top: 64px;}
+        #news dt{width: 242px;}
+        #news dd{width: 823px;}
+        #news .news_list{width: 100%;}
+        #news .news_list li{width: 50%; float: left;}
+        #news .news_date{width: 72px;height: 88px;border-right:1px solid #e3e3e3;text-align: center;}
+        #news .news_date i{font-size: 42px;font-weight: bold; color: #66c5b4;display: block;}
+        #news .news_date span{font-size: 20px;color: #999999;margin-top: 19px;}
+        #news .news_menu{width: 310px;margin-left: 20px;} 
+        #news .news_menu h3{font-size: 14px;color: #666666;}
+        #news .news_menu h3 a:hover{text-decoration: underline;}
+        #news .news_menu p{font-size: 12px;line-height: 24px;color: #a9a9a9;
+            margin-top:17px; margin-bottom: 28px;}
+            
+
+    </style>
+</head>
+<body>
+    <div id="head" class="container-fluid">
+        <div class="container">
+            <div class="head_logo l">
+                <a href=""><img src="./image/logo.png" alt="博文尚美" title="博文尚美"></a>
+            </div>
+            <ul class="head_menu r">
+                <li class="head_fre"><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">客户案例</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#">新闻资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner" class="container-fluid">
+        <ul class="banner_pg">
+            <li class="active" style="background-image: url(./image/benner.jpg)">
+                <a href="#"></a>
+            </li>
+            <li style="background-image: url(./image/banner.jpg)">
+                <a href="#"></a>
+            </li>
+            <li style="background-image: url(./image/banner1.jpg)">
+                <a href="#"></a>
+            </li>
+            <li style="background-image: url(./image/banner2.jpg)">
+                <a href="#"></a>
+            </li>
+        </ul>
+        <ol class="banner_bth">
+             <li class="active"></li>
+             <li></li>
+             <li></li>
+             <li></li>
+        </ol>
+    
+    </div>
+    <div id="server" class="container">
+         <div class="area">
+              <h2>服务范围</h2>
+              <p>OUR SERVICES</p>
+         </div>
+         <ul class="server_bth clear">
+              <li class="l">
+                  <div></div>
+                  <h3>1.WEB DESIGN</h3>
+                  <p>企业品牌网站设计 / 手机网站制作
+                      <br>
+                         动画网站创意设计</p>
+              </li>
+              <li class="l">
+                  <div></div>
+                    <h3>2.GRAPHIC DESIGN</h3>
+                    <p>标志LOGO设计 / 产品宣传册设计
+                       <br>
+                        企业广告 / 海报设计</p>
+              </li>
+              <li class="l">
+                  <div></div>
+                    <h3>3.E-BUSINESS PLAN</h3>
+                    <p>淘宝 / 天猫装修设计及运营推广
+                        <br>
+                            企业微博 / 微信营销</p>
+              </li>
+              <li class="l">
+                  <div></div>
+                    <h3>4.MAILBOX AGENTS</h3>
+                    <p>腾讯 / 网易企业邮箱品牌代理
+                        <br>
+                            个性化邮箱定制开发</p>
+              </li>
+    </div>
+    <div id="ku" class="container-fluid">
+        <div class="container">
+             <div class="ku_title">
+                 <h2>［ 客户案例 ］</h2>
+                 <p>With the best professional technology, to design the best innovative web site</p>
+             </div>
+              <ul class="ku_img clear">
+                <li>
+                    <a href=""><img src="./image/20141121095216750.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="./image/20141121095528549.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="./image/20141121105856226.jpg" alt=""></a>
+                </li>       
+              </ul>
+              <div class="ku_more">
+                  <a href="">VIEW MORE</a>
+              </div>
+        </div>
+
+    </div>
+    <div id="news" class="container">
+        <div class="area">
+            <h2>最新资讯</h2>
+            <p>TEH LATEST NEWS</p>
+        </div>
+        <dl>
+            <dt class="l">
+                   <img src="./image/xs1.jpg" alt="">
+            </dt>
+            <dd class="l">
+                <ul class="news_list"> 
+                    <li>
+                        <div class="news_date l">
+                            <i>18</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_menu l">
+                           <h3><a href="">漳州西恩视觉婚纱摄影网站建设</a></h3>
+                            <p>漳州西恩视觉婚纱摄影隶属西恩视觉文化传播有限公司旗下婚纱摄影品牌，由国内著名摄影师冬晖CHAN...</p>
+                        </div> 
+                     </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>16</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_menu l">
+                            <h3><a href="">网站数据统计用哪种比较好?</a></h3>
+                            <p>网站数据统计代码是平常网站建设过程中最受用户青睐的数据统计工具，几乎每个用户的网站程序都会...</p>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>14</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_menu l">
+                            <h3><a href="">厦门网站建设服务的内容主要有哪些？</a> </h3>
+                            <p>大多数用户建网站由于都是头一次接触，对于网站建设并不了解，往往会误认为找网站建设公司建网站...</p>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>12</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_menu l">
+                            <h3><a href="">海石景观股份有限公司网站设计案例解析</a></h3>
+                            <p>此次网站整体设计采用扁平化的的风格、简约式排版，网站主视觉区采用大面积的视觉效果图，以动画...</p>
+                        </div> 
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div id="foot" class="container-fluid">
+        <div class="container">
+            <p class="l">Copyright 2006- 2014 Bowenshangmei Culture All Rights Reserved</p>
+            <ul class="r">
+                <li>
+                  <a href="">Home</a> <a href="">About</a> <a href="">Portfolio</a> <a href="">Contact</a> 
+                </li>
+            </ul>
+               
+        </div>
+    </div>
+    <div id="address" class="container">
+        <ul>
+            <li>
+                Links: <a>深圳网站建设</a> | 
+                       <a>重庆网站建设</a> | 
+                       <a>成都网站建设</a> | 
+                       <a>广州网站建设</a> | 
+                       <a>天津网站建设</a> | 
+                       <a>服务器租用</a>   | 
+                       <a>赣州网站建设</a> | 
+                       <a>郑州网络公司</a> | 
+                       <a>成都网站建设</a> | 
+                       <a>济南网站建设</a> | 
+                       <a>网站建设</a>     | 
+                       <a>淄博网站建设</a> | 
+                       <a>厦门网站建设</a> | 
+                       <a>网站托管</a>     | 
+                       <a>广告中国</a>     | 
+                       <a>广州网站优化</a> | 
+                       <a>南京网站建设</a> | 
+                       <a>东莞网络公司</a> | 
+                       <a>昆明网络公司</a> |
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
